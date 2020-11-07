@@ -1,0 +1,3 @@
+djangorestframework
+markdown
+djangorestframework-api-key==2.0.0

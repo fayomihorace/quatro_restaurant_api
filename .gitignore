@@ -3,3 +3,7 @@ env/*
 venv/*
 db.sqlite3
 static/*
+api/migrations/*
+api/__pycache__
+restaurants_api/__pycache__
+*/__pycache__/*
