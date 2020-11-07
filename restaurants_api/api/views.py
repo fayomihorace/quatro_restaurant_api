@@ -12,7 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from rest_framework import permissions
 from rest_framework.views import APIView
-from rest_framework_api_key.permissions import HasAPIKey
+from rest_framework_api_key.permissions import BaseHasAPIKey
 from rest_framework_api_key.models import APIKey
 from rest_framework.status import HTTP_400_BAD_REQUEST
 from rest_framework.status import HTTP_404_NOT_FOUND
@@ -20,6 +20,16 @@ from rest_framework.status import HTTP_200_OK
 
 from api.models import UserApiKey
 from api.utils import find_restaurants_neightbords
+
+
+class HasAPIKey(BaseHasAPIKey):
+    """Custom API permission checker."""
+    model = APIKey
+
+    def get_key(self, request):
+        x_public_key: str = request.headers.get('X-Public-Key', '')
+        x_xecret_key: str = request.headers.get('X-Secret-Key', '')
+        return '{}.{}'.format(x_public_key, x_xecret_key)
 
 
 class RegisterView(APIView):
