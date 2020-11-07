@@ -5,6 +5,7 @@ Sample Restaurant REST API.
 ## Installation
 Quite straight forward
 ```
+cd restaurants_api
 virtualenv env
 source env/bin/activate
 pip3 install -r requirements.txt
