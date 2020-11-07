@@ -11,7 +11,6 @@ source env/bin/activate
 pip3 install -r requirements.txt
 python3 manage.py makemigrations
 python3 manage.py migrate
-python3 manage.py shell < restaurant_fixtures.py
 ```
 
 ## Create restaurant fixtures
@@ -30,8 +29,40 @@ python3 manage.py test
 ```
 
 ## Manual Test with fixtures data
+### start server
 ```
-input to http://127.0.0.1:8000/restaurants/
+python3 manage.py test
+```
+
+### register user
+```
+Post on http://127.0.0.1:8000/register/
+with data
+{
+	"name": "fayhj",
+	"username": "folahan",
+	"password": "fayomi"
+}
+```
+
+### login user
+```
+Post on http://127.0.0.1:8000/login/
+with data
+{
+	"username": "folahan",
+	"password": "fayomi"
+}
+```
+
+### get api keys
+```
+Get on http://127.0.0.1:8000/api_keys/
+```
+
+### returns the list of restaurants in a 3km radius of those coordinates.
+```
+Post on http://127.0.0.1:8000/restaurants/ with
 {
 	"lat": 0.0300011,
 	"lng": 0.0150021
