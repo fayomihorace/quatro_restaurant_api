@@ -46,6 +46,7 @@ def find_restaurants_neightbords(longitude: float, latitude: float) -> list:
             matched_restaurants.append({
                 'name': restaurant.name,
                 'longitude': restaurant.longitude,
-                'latitude': restaurant.latitude    
+                'latitude': restaurant.latitude ,
+                'distance': distance
             })
     return matched_restaurants

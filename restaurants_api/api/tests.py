@@ -142,12 +142,14 @@ class APITestClass(APITestCase):
             {
             "name": "Karim 24",
             "longitude": 0.0250022,
-            "latitude": 0.0250022
+            "latitude": 0.0250022,
+            "distance": 1.2435424623272242
             },
             {
             "name": "Zitawi",
             "longitude": 0.0250025,
-            "latitude": 0.0250025
+            "latitude": 0.0250025,
+            "distance": 1.2435573902932506
             }
         ]
         self.assertEqual(
