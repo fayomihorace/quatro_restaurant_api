@@ -57,7 +57,8 @@ Get on http://127.0.0.1:8000/api_keys/
 
 ### returns the list of restaurants in a 3km radius of those coordinates.
 ```
-Post on http://127.0.0.1:8000/restaurants/ with
+Post on http://127.0.0.1:8000/restaurants/ 
+With
 {
 	"lat": 0.0300011,
 	"lng": 0.0150021
