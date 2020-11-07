@@ -18,11 +18,6 @@ python3 manage.py migrate
 python3 manage.py shell < restaurant_fixtures.py
 ```
 
-## Create a user using a client (insomnia, postman ...)
-```
-python3 manage.py shell < restaurant_fixtures.py
-```
-
 ## Run unit tests
 ```
 python3 manage.py test
@@ -31,7 +26,7 @@ python3 manage.py test
 ## Manual Test with fixtures data
 ### start server
 ```
-python3 manage.py test
+python3 manage.py runserver
 ```
 
 ### register user
