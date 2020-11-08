@@ -1,11 +1,9 @@
 """API view."""
-from typing import Tuple
 from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.hashers import check_password
-from django.shortcuts import render
 from django.http import JsonResponse
 from django.db.utils import IntegrityError
 from django.views.decorators.csrf import csrf_exempt
@@ -15,7 +13,6 @@ from rest_framework.views import APIView
 from rest_framework_api_key.permissions import BaseHasAPIKey
 from rest_framework_api_key.models import APIKey
 from rest_framework.status import HTTP_400_BAD_REQUEST
-from rest_framework.status import HTTP_404_NOT_FOUND
 from rest_framework.status import HTTP_200_OK
 
 from api.models import UserApiKey

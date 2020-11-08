@@ -26,7 +26,7 @@ fixtures: dict = [
 ]
 Restaurant.objects.all().delete()
 for fixture in fixtures:
-    restaurant: Restaurant = Restaurant.objects.create(
+    Restaurant.objects.create(
         name=fixture['name'],
         longitude=fixture['lng'],
         latitude=fixture['lng'],

@@ -99,7 +99,7 @@ class APITestClass(APITestCase):
             )
 
     def test_create_account(self):
-        """Test registration will bad data."""
+        """Test registration ."""
         response = self._register_user(registration_data)
         self.assertEqual(response.status_code, SUCCESS_CODE)
 
@@ -159,4 +159,3 @@ class APITestClass(APITestCase):
             ),
             response
         )
-
